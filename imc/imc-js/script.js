@@ -1,3 +1,8 @@
+const btnCalculate = document.querySelector('#btn-calculate')
+
+btnCalculate.addEventListener('click', calculateImc)
+btnCalculate.addEventListener('click', resetResult)
+
 function calculateImc() {
     let heightElement = document.querySelector('#height').value / 100 //Em centimetros, dividir o valor por 100
     let weightElement = document.querySelector('#weight').value
