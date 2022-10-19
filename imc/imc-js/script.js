@@ -4,7 +4,7 @@ btnCalculate.addEventListener('click', calculateImc)
 btnCalculate.addEventListener('click', resetResult)
 
 function calculateImc() {
-    let heightElement = document.querySelector('#height').value / 100 //Em centimetros, dividir o valor por 100
+    let heightElement = document.querySelector('#height').value / 100 
     let weightElement = document.querySelector('#weight').value
     let resultImc = document.querySelector('#result')
 
@@ -26,16 +26,20 @@ function calculateImc() {
     else {
         return;
     }
+
+    heightElement.innerText = ''
+    weightElement.innerText = ''
 }
 
-function resetResult() {
-    let heightElement = document.querySelector('#height').value
-    let weightElement = document.querySelector('#weight').value
-    let resultImc = document.querySelector('#result')
 
-    if (heightElement === '' && weightElement === '') {
-        resultImc.innerText = null
-    } else {
-        return
-    }
-}
+// function resetResult() {
+//     let heightElement = document.querySelector('#height').value
+//     let weightElement = document.querySelector('#weight').value
+//     let resultImc = document.querySelector('#result')
+
+//     if (heightElement === '' && weightElement === '') {
+//         resultImc.innerText = null
+//     } else {
+//         return
+//     }
+// }
