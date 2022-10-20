@@ -85,3 +85,22 @@
     font-weight: 600;
     text-align: left;
 }
+
+/* Footer */
+
+footer {
+    width: 100%;
+}
+
+#footer-infos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+#footer-infos a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
