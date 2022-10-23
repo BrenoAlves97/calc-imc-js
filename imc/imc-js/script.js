@@ -1,14 +1,13 @@
 const btnCalculate = document.querySelector('#btn-calculate')
 
-btnCalculate.addEventListener('click', calculateImc)
-btnCalculate.addEventListener('click', resetResult)
+btnCalculate.addEventListener('click', calculateImc);
 
 function calculateImc() {
-    let heightElement = document.querySelector('#height').value / 100
-    let weightElement = document.querySelector('#weight').value
-    let resultImc = document.querySelector('#result')
+    const heightElement = document.querySelector('#height').value / 100;
+    const weightElement = document.querySelector('#weight').value;
+    const resultImc = document.querySelector('#result');
 
-    let formulaImc = weightElement / (heightElement * heightElement)
+    const formulaImc = weightElement / (heightElement * heightElement);
 
     if (formulaImc <= 24.9 && formulaImc >= 18.5) {
         resultImc.innerText = `Parabéns! seu IMC está ${formulaImc.toFixed(2)}. Você está com o peso normal.`
@@ -20,22 +19,9 @@ function calculateImc() {
         resultImc.innerText = `Obesidade grave! seu IMC está ${formulaImc.toFixed(2)}. Ao atingir este nivel de IMC, o risco de doenças associadas está entre alto e muito alto.`
     } else if (formulaImc < 18.5 && formulaImc > 0.0) {
         resultImc.innerText = `Cuidado! Seu IMC está ${formulaImc.toFixed(2)}. Estar abaixo do peso eleva risco de vida mais do que obesidade.`
-    } else if (heightElement === '' && weightElement === '') {
-        resetResult();
-    }
-    else {
-        return;
-    }
+    } 
+
+    document.querySelector('#height').value = '';
+    document.querySelector('#weight').value = '';
 }
 
-function resetResult() {
-    let heightElement = document.querySelector('#height').value
-    let weightElement = document.querySelector('#weight').value
-    let resultImc = document.querySelector('#result')
-
-    if (heightElement === '' && weightElement === '') {
-        resultImc.innerText = null
-    } else {
-        return
-    }
-}
