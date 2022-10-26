@@ -104,3 +104,13 @@ footer {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
+
+/* utilities */
+/* 
+.error {
+    border-color: #FF0000;
+}
+
+.error::placeholder {
+    color: #F00;
+} */

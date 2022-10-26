@@ -25,3 +25,4 @@ function calculateImc() {
     document.querySelector('#weight').value = '';
 }
 
+
