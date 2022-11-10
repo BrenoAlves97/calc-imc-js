@@ -1,4 +1,5 @@
-# imc-calculator
+# Calculadora IMC
+
 Aplicação que o Usuário entra com informações de Peso(KG) e Altura(CM), e ao interagir com o Calcular, saberá como está o IMC(Valor), e o Seu status atual.
 
 #HTML #CSS #JAVASCRIPT #DOM 
