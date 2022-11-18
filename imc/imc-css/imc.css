@@ -23,6 +23,17 @@
     border: 2px solid rgba(174, 174, 174, 0.895);
 }
 
+/* Responsive */
+
+@media (max-width: 850px) {
+
+    #calc-imc {
+        max-width: 400px;
+        border-color: transparent;
+        background: rgba(10, 1, 11, 0.468);
+    }
+}
+
 #calc-imc h2 {
     text-align: center;
     font-weight: 600;
@@ -63,13 +74,13 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    gap: .5rem;
 }
 
 .box-btn button {
     padding: 1rem 2rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin: 0 0 1rem 0;
     border: 3px solid transparent;
 }
 
@@ -106,11 +117,7 @@ footer {
 }
 
 /* utilities */
-/* 
-.error {
-    border-color: #FF0000;
-}
 
 .error::placeholder {
     color: #F00;
-} */
+}

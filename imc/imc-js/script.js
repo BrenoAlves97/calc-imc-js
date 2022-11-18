@@ -1,6 +1,33 @@
 const btnCalculate = document.querySelector('#btn-calculate')
+const btnReset = document.querySelector('#btn-reset-values');
 
 btnCalculate.addEventListener('click', calculateImc);
+btnCalculate.addEventListener('click', isInputEmpty);
+
+btnReset.addEventListener('click', () => {
+    const heightElement = document.querySelector('#height');
+    const weightElement = document.querySelector('#weight');
+    const resultImc = document.querySelector('#result');
+
+    heightElement.value = '';
+    weightElement.value = '';
+    resultImc.textContent = '';
+});
+
+function isInputEmpty() {
+
+    const heightElement = document.querySelector('#height').value;
+    const weightElement = document.querySelector('#weight').value;
+
+    if (!heightElement || !weightElement) {
+        // document.querySelector('#height').classList.add('error');
+        // document.querySelector('#weight').classList.add('error');
+        window.alert('Por gentileza, preencha os campos antes de calcular!')
+    } else {
+        return;
+    }
+}
+
 
 function calculateImc() {
     const heightElement = document.querySelector('#height').value / 100;
@@ -20,9 +47,7 @@ function calculateImc() {
     } else if (formulaImc < 18.5 && formulaImc > 0.0) {
         resultImc.innerText = `Cuidado! Seu IMC está ${formulaImc.toFixed(2)}. Estar abaixo do peso eleva risco de vida mais do que obesidade.`
     } 
-
-    document.querySelector('#height').value = '';
-    document.querySelector('#weight').value = '';
 }
+
 
 
